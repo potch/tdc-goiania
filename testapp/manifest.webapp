@@ -1,0 +1,14 @@
+{
+  "name":"Test App",
+  "description":"This app was made for TDC Goiania",
+  "version":"1.0",
+  "icons":{
+  },
+  "installs_allowed_from":[
+    "*"
+  ],
+  "developer":{
+    "name":"Potch",
+    "url":"http://potch.me/"
+  }
+}
