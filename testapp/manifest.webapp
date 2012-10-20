@@ -7,7 +7,7 @@
   "installs_allowed_from":[
     "*"
   ],
-  "launch_path": "/testapp/",
+  "launch_path": "/tdc-goiania/testapp/",
   "developer":{
     "name":"Potch",
     "url":"http://potch.me/"
