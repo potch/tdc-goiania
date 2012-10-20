@@ -61,12 +61,14 @@
             notesEl.innerHTML = notes;
         }
         now.ready(function() {
-            document.querySelector('#prev').addEventListener('touchstart', function(e) {
+            var touch = ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
+            var ev = touch ? 'touchstart' : 'click';
+            document.querySelector('#prev').addEventListener(ev, function(e) {
                 e.preventDefault();
                 now.remotePrev();
                 document.title = "prev";
             });
-            document.querySelector('#next').addEventListener('touchstart', function(e) {
+            document.querySelector('#next').addEventListener(ev, function(e) {
                 e.preventDefault();
                 now.remoteNext();
                 document.title = "next";

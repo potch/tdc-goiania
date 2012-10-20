@@ -94,6 +94,9 @@ section:not(.list).after {
 #toolgrid div:nth-child(2) {
   background-position: center center;
 }
+#js {
+  font-size: 350%;
+}
 #amo,
 #mkt {
   position: absolute;
@@ -105,9 +108,24 @@ section:not(.list).after {
   max-width: 100%;
   max-height: 617px;
 }
+#html5 {
+  position: relative;
+}
+#html5 img {
+  position: absolute;
+  height: 5em;
+}
 #mkt {
   max-height: 746px;
 }
 footer {
   font-size: 70%;
+}
+#ew {
+  height: 2em;
+  margin-top: -0.2em;
+}
+#java {
+  margin-top: -0.2em;
+  height: 1.2em;
 }

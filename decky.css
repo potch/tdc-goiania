@@ -37,7 +37,7 @@ section:after {
     font-size: 70%;
     color: rgba(0,0,0,.5);
 }
-section aside {
+#notes {
     display: none;
 }
 body.list {

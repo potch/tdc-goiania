@@ -53,10 +53,10 @@ var deck = (function() {
                 n = n < 1 ? 1 : (n > numSlides ? numSlides : n);
                 if (n == current) return;
                 window.location.hash = "#"+n;
-                µ('[data-subslide]', currentSlide).css({'visibility': 'hidden'});
                 current = n;
                 subSlide = 0;
                 currentSlide = slides[current-1];
+                µ('[data-subslide]', currentSlide).css({'visibility': 'hidden'});
                 for (var i=0; i<numSlides; i++) {
                     var s = slides[i];
                     if (i < current-1) {
@@ -69,13 +69,14 @@ var deck = (function() {
                 }
             }
             if (exports.onslidechange) {
-                var notesEl = µ('aside', currentSlide);
+                var notesEl = µ('#notes aside');
                 var slideName = current;
                 if (subSlide) {
                     slideName += '.' + subSlide;
                 }
-                if (notesEl.length) {
-                    exports.onslidechange(slideName, notesEl[0].innerHTML);
+                console.log(notesEl[current-1]);
+                if (notesEl[current-1]) {
+                    exports.onslidechange(slideName, notesEl[current-1].innerHTML);
                 } else {
                     exports.onslidechange(slideName, '');
                 }
@@ -131,7 +132,7 @@ var deck = (function() {
     });
 
     function adjustSizing() {
-        body.css({"font-size": slides[0].offsetHeight/3 + "%"});
+        body.css({"font-size": (slides[0].offsetHeight+slides[0].offsetWidth)/10 + "%"});
         window.location.hash = "#"+current;
     }
     adjustSizing();
