@@ -138,9 +138,10 @@ https://login.persona.org/include.js
       <aside>Disappoint</aside>
       <aside>Talk about Open Web Apps</aside>
       <aside>Poll the audience, gauge technical level</aside>
-      <aside>Firefox OS, the mobile web on a Phone</aside>
+      <aside>Firefox OS, the power and ease of the Web on a Phone</aside>
       <aside>
         (Technical) What is Firefox OS?
+        Same, Same, Same!
         <ul>
           <li>Gonk - Just like Android, It's powered by the Linux Kernel
           <li>Gecko - The OS level is adapted from Gecko, the same rendering engine used in Firefox
@@ -162,14 +163,15 @@ https://login.persona.org/include.js
       <aside>Questions</aside>
       <aside>Thanks!</aside>
     </article>
-    <script src="µ.js"></script>
+    <script src="mu.js"></script>
     <script src="decky.js"></script>
     <script>var now = {};</script>
     <script src="http://drteeth.local:9094/nowjs/now.js"></script>
     <script>
       var stub = function() {}
-      deck.onslidechange = function(n, notes) {
-        now.remoteStatus(n, notes);
+      if (window.location.search == 'master')
+      deck.onslidechange = function(n, slide, notes) {
+        now.remoteStatus(n, slide, notes);
       }
       now.num = function() {};
       now.status = function() {};

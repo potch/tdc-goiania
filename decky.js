@@ -76,7 +76,7 @@ var deck = (function() {
                 }
                 console.log(notesEl[current-1]);
                 if (notesEl[current-1]) {
-                    exports.onslidechange(slideName, notesEl[current-1].innerHTML);
+                    exports.onslidechange(slideName, currentSlide.innerHTML, notesEl[current-1].innerHTML);
                 } else {
                     exports.onslidechange(slideName, '');
                 }
