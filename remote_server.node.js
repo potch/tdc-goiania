@@ -3,11 +3,7 @@ var http = require('http');
 var url = require('url');
 
 var server = http.createServer(function(req, res){
-    var path = req.url.split('?')[0];
-    if (path[path.length-1] == '/') {
-        path = path + 'index.html';
-    }
-    res.end(fs.readFileSync(__dirname+path));
+    res.end(fs.readFileSync(__dirname+'/remote.html'));
 });
 
 var nowjs = require("now");
